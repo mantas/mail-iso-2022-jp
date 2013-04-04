@@ -19,7 +19,7 @@ module Mail
 
     private
     def already_encoded?(name, charset)
-      true if charset == 'ISO-2022-JP' && name =~ /(^Subject:\ \=\?ISO-2022-JP\?)/
+      charset == 'ISO-2022-JP' && name =~ /(^Subject:\ \=\?ISO-2022-JP\?)/
     end
   end
 end
