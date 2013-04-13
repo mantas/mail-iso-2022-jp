@@ -1,4 +1,8 @@
-## 2.0.0 (2012-01-06)
+## 2.0.1 (2013-04-14)
+
+ * Do not encode field value if value is ascii only.
+
+## 2.0.0 (2013-01-06)
 
  * Divide `patches.rb` into separate files.
  * Convert MINUS SIGN (U+2212) and FULLWIDTH HYPHEN MINUS (U+ff0d) to 0x215d.
