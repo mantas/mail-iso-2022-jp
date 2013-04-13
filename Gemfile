@@ -13,12 +13,11 @@ group :development, :test do
   gem "bundler"
   if mail_gem_version
     gem "activesupport"
-  elsif rails_version == "edge"
+  end
+  if rails_version == "edge"
     gem "actionmailer", :git => "git://github.com/rails/rails.git"
   elsif rails_version && rails_version.strip != ""
     gem "actionmailer", rails_version
-  else
-    gem "actionmailer", ">= 3.0.0"
   end
   gem "rdoc", ">= 3.12"
 end
