@@ -5,7 +5,7 @@
 set -e
 
 function run {
-  for version in 2.2.6 2.4.4 2.5.3
+  for version in 2.2.6 2.4.4 2.5.4
   do
     rm -f Gemfile.lock
     MAIL_GEM_VERSION=$version bundle install
