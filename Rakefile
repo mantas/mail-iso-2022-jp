@@ -13,6 +13,14 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = true
 end
 
+desc 'Test mail-iso-2022-jp library using action_mailer.'
+Rake::TestTask.new(:test_all) do |t|
+  t.libs << 'lib'
+  t.libs << 'test'
+  t.pattern = 'test/mail_test.rb'
+  t.verbose = true
+end
+
 desc 'Generate documentation for the mail-iso-2022-jp library.'
 RDoc::Task.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'

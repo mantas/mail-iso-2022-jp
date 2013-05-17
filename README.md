@@ -53,7 +53,7 @@ Requirements
 
 ### ActionMailer (Optional) ###
 
-* 3.0 or higher
+* 3.0 or higher (including 4.0.0.rc1)
 
 
 Getting Start

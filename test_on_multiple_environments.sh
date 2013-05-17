@@ -5,8 +5,7 @@
 set -e
 
 function run {
-  for version in 2.2.6 2.4.4 2.5.4
-  do
+  for version in 2.2.6 2.4.4 2.5.4 HEAD; do
     rm -f Gemfile.lock
     MAIL_GEM_VERSION=$version bundle install
     MAIL_GEM_VERSION=$version bundle exec ruby -Itest test/mail_test.rb
@@ -14,12 +13,17 @@ function run {
 
   gem list --local bundler | grep bundler || gem install bundler --no-ri --no-rdoc
 
-  for version in 3.2.13
-  do
+  if test $RBENV_VERSION = "1.8.7-p358"; then
+    RAILS_VERSIONS=(3.2.13)
+  else
+    RAILS_VERSIONS=(3.2.13 4.0.0.rc1)
+  fi
+
+  for version in ${RAILS_VERSIONS[@]}; do
     rm -f Gemfile.lock
     echo "Running bundle exec rspec spec against actionmailer $version..."
-    MAIL_GEM_VERSION=2.5.3 MAIL_ISO_2022_JP_RAILS_VERSION=$version bundle install
-    MAIL_GEM_VERSION=2.5.3 MAIL_ISO_2022_JP_RAILS_VERSION=$version bundle exec rake test
+    MAIL_GEM_VERSION=2.5.4 MAIL_ISO_2022_JP_RAILS_VERSION=$version bundle install
+    MAIL_GEM_VERSION=2.5.4 MAIL_ISO_2022_JP_RAILS_VERSION=$version bundle exec rake test_all
   done
 }
 
