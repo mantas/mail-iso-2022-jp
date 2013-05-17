@@ -124,6 +124,7 @@ Remarks
     * DOUBLE VERTICAL LINE (U+2016, `‖`) and PARALLEL TO (U+2225, `∥`) to the double vertical line (0x2142, `‖`).
     * Halfwidth (Hankaku) katakanas are maintained intact.
     * Characters that cannot be translated into iso-2022-jp encoding are substituted with question marks (`?`).
+    * A pull request https://github.com/mikel/mail/pull/534 has been sent to the `mikel/mail` repository but not yet accepted.
 
 * (ja)
     * `①` などのNEC特殊文字や `髙` や `﨑` といったIBM拡張文字を件名、宛先、本文などに含めることができます。
@@ -133,6 +134,7 @@ Remarks
     * 二重縦線(U+2016, `‖`)と平行記号(U+2225, `∥`)は、二重縦線(0x2142, `‖`)に変換されます。
     * 半角カタカナはそのまま維持されます。
     * 変換できない文字は疑問符(`?`)で置換されます。
+    * `mikel/mail` リポジトリにプルリクエスト https://github.com/mikel/mail/pull/534 が送られていますが、まだアクセプトされていません。
 
 References
 ----------
