@@ -9,7 +9,7 @@ desc 'Test mail-iso-2022-jp library.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
+  t.pattern = 'test/mail_test.rb'
   t.verbose = true
 end
 

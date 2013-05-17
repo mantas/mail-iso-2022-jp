@@ -15,9 +15,7 @@ rails_version = ENV['MAIL_ISO_2022_JP_RAILS_VERSION']
 group :development, :test do
   gem "rake"
   gem "bundler"
-  if mail_gem_version
-    gem "activesupport"
-  end
+  gem "activesupport"
   if rails_version == "edge"
     gem "actionmailer", :git => "git://github.com/rails/rails.git"
   elsif rails_version && rails_version.strip != ""
