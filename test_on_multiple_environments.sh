@@ -13,7 +13,7 @@ function run {
 
   gem list --local bundler | grep bundler || gem install bundler --no-ri --no-rdoc
 
-  if test $RBENV_VERSION = "1.8.7-p358"; then
+  if test $RBENV_VERSION = "1.8.7-p371"; then
     RAILS_VERSIONS=(3.2.13)
   else
     RAILS_VERSIONS=(3.2.13 4.0.0.rc1)
@@ -27,13 +27,13 @@ function run {
   done
 }
 
-export RBENV_VERSION=1.8.7-p358
+export RBENV_VERSION=1.8.7-p371
 run
 
-export RBENV_VERSION=1.9.3-p392
+export RBENV_VERSION=1.9.3-p429
 run
 
-export RBENV_VERSION=2.0.0-p0
+export RBENV_VERSION=2.0.0-p195
 run
 
 echo 'Success!'
