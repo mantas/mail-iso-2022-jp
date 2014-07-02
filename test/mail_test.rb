@@ -2,7 +2,9 @@
 
 $:.unshift File.dirname(__FILE__)
 require 'test_helper'
-require File.dirname(__FILE__) + '/../init'
+require 'nkf'
+require 'mail'
+require 'mail-iso-2022-jp'
 
 class MailTest < ActiveSupport::TestCase
   test "should send with ISO-2022-JP encoding" do
