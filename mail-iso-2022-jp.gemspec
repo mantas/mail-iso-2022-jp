@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/kuroda/mail-iso-2022-jp"
   s.description = "A set of patches for mikel's mail gem. With this, you can easily send and receive mails with ISO-2022-JP enconding (so-called 'JIS-CODE')."
   s.summary     = "A set of patches that provides 'mail' gem with iso-2022-jp conversion capability."
+  s.license     = "MIT"
 
   s.required_ruby_version = ">= 1.8.7"
 
