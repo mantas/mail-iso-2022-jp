@@ -6,6 +6,11 @@ require 'nkf'
 require 'mail'
 require 'mail-iso-2022-jp'
 
+# Suppress deprecation warning.
+if ActiveSupport.respond_to?(:test_order=)
+  ActiveSupport.test_order = :sorted
+end
+
 class MailTest < ActiveSupport::TestCase
   test "should send with ISO-2022-JP encoding" do
     mail = Mail.new(:charset => 'ISO-2022-JP') do

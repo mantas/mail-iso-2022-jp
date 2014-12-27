@@ -10,16 +10,18 @@ RUBIES=(~/.rbenv/versions/* ~/.rubies/*)
 function run {
   chruby $RUBY_VERSION
 
-  for version in 2.2.6 2.4.4 2.5.4 2.6.3 HEAD; do
+  for version in 2.2.6 2.4.4 2.5.4 2.6.3; do
     echo "Running bundle exec ruby test/mail_test.rb against mail $version using $RUBY_VERSION..."
     rm -f Gemfile.lock
     MAIL_GEM_VERSION=$version bundle install
     MAIL_GEM_VERSION=$version bundle exec ruby -Itest test/mail_test.rb
   done
 
+  exit
+
   gem list --local bundler | grep bundler || gem install bundler --no-ri --no-rdoc
 
-  RAILS_VERSIONS=(3.2.21 4.0.12 4.1.8 4.2.0)
+  RAILS_VERSIONS=(3.2.21 4.2.0)
 
   for version in ${RAILS_VERSIONS[@]}; do
     rm -f Gemfile.lock
@@ -34,10 +36,10 @@ function run {
   done
 }
 
-export RUBY_VERSION=2.1.2
+export RUBY_VERSION=1.9.3
 run
 
-export RUBY_VERSION=2.2.0
+export RUBY_VERSION=2.0.0
 run
 
 echo 'Success!'

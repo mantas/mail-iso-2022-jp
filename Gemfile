@@ -16,6 +16,8 @@ group :development, :test do
   gem "rake"
   gem "bundler"
   gem "activesupport"
+  gem "minitest"
+  gem "test-unit"
   if rails_version == "edge"
     gem "actionmailer", :git => "git://github.com/rails/rails.git"
   elsif rails_version && rails_version.strip != ""

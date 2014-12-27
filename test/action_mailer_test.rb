@@ -2,6 +2,7 @@
 
 $:.unshift File.dirname(__FILE__)
 require 'test_helper'
+require 'active_support'
 require 'action_mailer'
 require 'nkf'
 require 'mail'
