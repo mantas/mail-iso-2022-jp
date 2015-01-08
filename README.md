@@ -118,7 +118,7 @@ Remarks
 * (en)
     * NEC special characters like `①` and IBM extended characters like `髙`, `﨑`
     are allowed in the subject, recipient names and mail body.
-    * FULLWIDTH TILDE (U+FF5E) and WAVE DASH (U+301C, `〜`) are converted to the fullwidth tilde (0x2141, `〜`).
+    * FULLWIDTH TILDE (U+FF5E) and WAVE DASH (U+301C, `〜`) are converted to the fullwidth tilde (0x2141, `～`).
     * FULLWIDTH HYPHEN MINUS (U+FF0D) and MINUS SIGN (U+2212) are converted to the fullwidth minus (0x215d, `－`).
     * EM DASH (U+2014) and HORIZONTAL BAR (U+2015) are converted to the dash sign (0x213d, `―`).
     * DOUBLE VERTICAL LINE (U+2016, `‖`) and PARALLEL TO (U+2225, `∥`) to the double vertical line (0x2142, `‖`).
