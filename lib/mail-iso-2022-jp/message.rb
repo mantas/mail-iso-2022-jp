@@ -35,5 +35,10 @@ module Mail
     end
     alias_method :text_part_without_iso_2022_jp_encoding=, :text_part=
     alias_method :text_part=, :text_part_with_iso_2022_jp_encoding=
+
+    def subject( val = nil )
+      _val = default :subject, val
+      Encodings.b_value_decode(_val)
+    end
   end
 end
