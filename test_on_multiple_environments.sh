@@ -19,7 +19,7 @@ function run {
 
   gem list --local bundler | grep bundler || gem install bundler --no-ri --no-rdoc
 
-  RAILS_VERSIONS=(3.2.22.2 4.0.13 4.1.15 4.2.6)
+  RAILS_VERSIONS=(3.2.22.2 4.0.13 4.1.15 4.2.6 5.0.0.beta3)
 
   for version in ${RAILS_VERSIONS[@]}; do
     rm -f Gemfile.lock
