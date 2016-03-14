@@ -1,3 +1,7 @@
+## 2.0.5 (Not yet released)
+
+ * Support mail 2.6.4
+
 ## 2.0.1 (2013-04-14)
 
  * Do not encode field value if value is ascii only.
