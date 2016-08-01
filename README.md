@@ -49,11 +49,11 @@ Requirements
 
 ### Gems ###
 
-* `mail` 2.2.6 or higher, but lower than or equal to 2.6.4.rc2
+* `mail` 2.2.6 or higher, but lower than or equal to 2.6.4
 
 ### ActionMailer (Optional) ###
 
-* 3.0 or higher (including 5.0.0.beta3)
+* 3.0 or higher (including 5.x)
 
 
 Getting Start

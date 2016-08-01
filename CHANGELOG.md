@@ -1,4 +1,4 @@
-## 2.0.5 (Not yet released)
+## 2.0.5 (2016-08-01)
 
  * Support mail 2.6.4
 
