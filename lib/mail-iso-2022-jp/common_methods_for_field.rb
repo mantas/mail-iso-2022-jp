@@ -11,7 +11,7 @@ module Mail
 
     def b_value_encode(string)
       string.split(' ').map do |s|
-        if s =~ /\e/
+        if s =~ /\e/ || s == "\"" || start_with_specials?(s) || end_with_specials?(s)
           encode64(s)
         else
           s
@@ -41,6 +41,14 @@ module Mail
       value = value.to_s.gsub(/#{EM_DASH}/, HORIZONTAL_BAR)
       value = value.to_s.gsub(/#{DOUBLE_VERTICAL_LINE}/, PARALLEL_TO)
       value
+    end
+
+    def start_with_specials?(string)
+      string =~ /\A[\(\)<>\[\]:;@\\,\."]+[a-zA-Z]+\Z/
+    end
+
+    def end_with_specials?(string)
+      string =~ /\A[a-zA-Z]+[\(\)<>\[\]:;@\\,\."]+\Z/
     end
   end
 end

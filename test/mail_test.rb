@@ -58,6 +58,22 @@ class MailTest < ActiveSupport::TestCase
     assert_equal NKF::JIS, NKF.guess(mail.body.encoded)
   end
 
+  test "should send with ISO-2022-JP encoding and quoted display-name" do
+    mail = Mail.new(:charset => 'ISO-2022-JP') do
+      from '" <Yamada 太郎>" <taro@example.com>'
+      to '"<佐藤 Hanako> " <hanako@example.com>'
+      cc '" <X事務局> " <info@example.com>'
+      subject ''
+      body '日本語本文'
+    end
+    assert_equal 'ISO-2022-JP', mail.charset
+    assert_equal "From: =?ISO-2022-JP?B?Ig==?= =?ISO-2022-JP?B?PFlhbWFkYQ==?= =?ISO-2022-JP?B?GyRCQkBPOhsoQj4i?= <taro@example.com>\r\n", mail[:from].encoded
+    assert_equal "To: =?ISO-2022-JP?B?IjwbJEI6NEYjGyhC?= =?ISO-2022-JP?B?SGFuYWtvPg==?= =?ISO-2022-JP?B?Ig==?= <hanako@example.com>\r\n", mail[:to].encoded
+    assert_equal "Cc: =?ISO-2022-JP?B?Ig==?= =?ISO-2022-JP?B?PFgbJEI7dkwzNkkbKEI+?= =?ISO-2022-JP?B?Ig==?= <info@example.com>\r\n", mail[:cc].encoded
+    assert_equal "Subject: \r\n", mail[:subject].encoded
+    assert_equal NKF::JIS, NKF.guess(mail.body.encoded)
+  end
+
   test "should send with UTF-8 encoding" do
     mail = Mail.new do
       from '山田太郎 <taro@example.com>'
