@@ -1,3 +1,8 @@
+## 2.0.6
+
+ * Support quoted display-name (#18) -- ackintosh
+ * Drop support for Ruby 2.1.x
+
 ## 2.0.5 (2016-08-01)
 
  * Support mail 2.6.4
