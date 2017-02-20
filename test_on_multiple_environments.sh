@@ -19,12 +19,12 @@ function run {
 
   gem list --local bundler | grep bundler || gem install bundler --no-ri --no-rdoc
 
-  RAILS_VERSIONS=(3.2.22.2 4.0.13 4.1.15 4.2.6 5.0.0)
+  RAILS_VERSIONS=(3.2.22.5 4.0.13 4.1.16 4.2.7.1 5.0.1)
 
   for version in ${RAILS_VERSIONS[@]}; do
     rm -f Gemfile.lock
     echo "Running bundle exec rspec spec against actionmailer $version using $RUBY_VERSION..."
-    if test $version = "3.2.22.2"; then
+    if test $version = "3.2.22.5"; then
       mail_gem_version=2.5.4
     else
       mail_gem_version=2.6.4
@@ -34,10 +34,13 @@ function run {
   done
 }
 
-export RUBY_VERSION=2.2.5
+export RUBY_VERSION=2.2.6
 run
 
-export RUBY_VERSION=2.3.1
+export RUBY_VERSION=2.3.3
+run
+
+export RUBY_VERSION=2.4.0
 run
 
 echo 'Success!'
