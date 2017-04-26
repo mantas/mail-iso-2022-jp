@@ -1,3 +1,7 @@
+## 2.0.7
+
+ * iso-2022-jp should be handled as ISO-2022-JP in unstructured fields (#19) -- shugo
+
 ## 2.0.6
 
  * Support quoted display-name (#18) -- ackintosh
