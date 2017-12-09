@@ -1,8 +1,13 @@
-## 2.0.7
+## 2.0.8 (Not yet released)
+
+ * Support mail 2.7.0
+   (Note: This version of mail gem changes the way to handle empty subject.)
+
+## 2.0.7 (2017-04-26)
 
  * iso-2022-jp should be handled as ISO-2022-JP in unstructured fields (#19) -- shugo
 
-## 2.0.6
+## 2.0.6 (2017-02-20)
 
  * Support quoted display-name (#18) -- ackintosh
  * Drop support for Ruby 2.1.x
