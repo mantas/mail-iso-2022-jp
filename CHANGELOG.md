@@ -1,4 +1,4 @@
-## 2.0.8 (Not yet released)
+## 2.0.8 (2018-02-23)
 
  * Support mail 2.7.0
    (Note: This version of mail gem changes the way to handle empty subject.)
