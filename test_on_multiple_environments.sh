@@ -43,4 +43,7 @@ run
 export RUBY_VERSION=2.4.2
 run
 
+export RUBY_VERSION=2.5.0
+run
+
 echo 'Success!'
