@@ -51,8 +51,6 @@ Requirements
 
 * `mail` 2.2.6 or higher, but lower than or equal to 2.7.0
 
-If you want to use `mail` 2.7.0, try `mail-iso-2022-jp` 2.0.8.
-
 ### ActionMailer (Optional) ###
 
 * 3.0 or higher (including 5.x)
