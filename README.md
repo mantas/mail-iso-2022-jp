@@ -45,15 +45,15 @@ Requirements
 
 ### Ruby ###
 
-* 2.2, 2.3, 2.4, 2.5
+* 2.2, 2.3, 2.4, 2.5, 2.6
 
 ### Gems ###
 
-* `mail` 2.2.6 or higher, but lower than or equal to 2.7.0
+* `mail` 2.2.6 or higher, but lower than or equal to 2.7.1
 
 ### ActionMailer (Optional) ###
 
-* 3.0 or higher (including 5.x)
+* 3.0 or higher (including 6.x)
 
 Getting Start
 -------------
