@@ -49,7 +49,7 @@ Requirements
 
 ### Gems ###
 
-* `mail` 2.2.6 or higher, but lower than or equal to 2.7.1
+* `mail` 2.2.6 or higher, but lower than or equal to 2.7.2
 
 ### ActionMailer (Optional) ###
 
